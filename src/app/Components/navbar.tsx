@@ -71,13 +71,13 @@ const Navbar = () => {
 
           {/* Navigation Links - Desktop */}
           <div className="hidden md:flex items-center space-x-8">
-            <a
+            <Link
               href="/"
               className="text-black hover:text-gray-900 transition-colors duration-200 font-medium relative group text-sm"
             >
               HOME
               <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-gray-900 transition-all duration-200 group-hover:w-full"></span>
-            </a>
+            </Link>
 
             {/* Services Dropdown */}
             <div 
@@ -85,7 +85,7 @@ const Navbar = () => {
               onMouseEnter={() => setShowServices(true)}
               onMouseLeave={() => setShowServices(false)}
             >
-              <a
+              <Link
                 href="/services"
                 className="text-black hover:text-gray-900 transition-colors duration-200 font-medium relative group text-sm cursor-pointer flex items-center gap-1"
               >
@@ -104,7 +104,7 @@ const Navbar = () => {
                   />
                 </svg>
                 <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-gray-900 transition-all duration-200 group-hover:w-full"></span>
-              </a>
+              </Link>
               
               {/* Dropdown Menu */}
               <div 
@@ -115,34 +115,35 @@ const Navbar = () => {
                 {showServices && (
                   <div className="bg-white border-2 shadow-lg py-2">
                     {services.map((service: any, index: number) => (
-                      <a
+                      <Link
                         key={index}
                         href={`/services/${service.slug}`}
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-black hover:text-white transition-colors duration-200"
+                        onClick={() => setShowServices(false)}
                       >
                         {service.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 )}
               </div>
             </div>
 
-            <a
+            <Link
               href="/about"
               className="text-black hover:text-gray-900 transition-colors duration-200 font-medium relative group text-sm"
             >
               ABOUT US
               <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-gray-900 transition-all duration-200 group-hover:w-full"></span>
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="/contact"
               className="text-black hover:text-gray-900 transition-colors duration-200 font-medium relative group text-sm"
             >
               CONTACT US
               <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-gray-900 transition-all duration-200 group-hover:w-full"></span>
-            </a>
+            </Link>
           </div>
 
           {/* Get a Quote Button - Desktop */}
@@ -204,37 +205,37 @@ const Navbar = () => {
 
               {/* Mobile Navigation Links */}
               <div className="mt-8 space-y-4">
-                <a
+                <Link
                   href="/"
                   className="block text-black hover:text-gray-900 transition-colors duration-200 font-medium text-sm"
                   onClick={() => setShowMobileMenu(false)}
                 >
                   HOME
-                </a>
+                </Link>
 
-                <a
+                <Link
                   href="/services"
                   className="block text-black hover:text-gray-900 transition-colors duration-200 font-medium text-sm"
                   onClick={() => setShowMobileMenu(false)}
                 >
                   SERVICES
-                </a>
+                </Link>
 
-                <a
+                <Link
                   href="/about"
                   className="block text-black hover:text-gray-900 transition-colors duration-200 font-medium text-sm"
                   onClick={() => setShowMobileMenu(false)}
                 >
                   ABOUT US
-                </a>
+                </Link>
 
-                <a
+                <Link
                   href="/contact"
                   className="block text-black hover:text-gray-900 transition-colors duration-200 font-medium text-sm"
                   onClick={() => setShowMobileMenu(false)}
                 >
                   CONTACT US
-                </a>
+                </Link>
 
                 {/* Mobile Get a Quote Button */}
                 <button 

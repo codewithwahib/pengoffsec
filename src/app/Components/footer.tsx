@@ -1,5 +1,6 @@
 import React from "react";
 import { Facebook, Twitter, Globe } from 'lucide-react';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -33,24 +34,24 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-4">QUICK LINKS</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/" className="text-sm text-gray-700 hover:text-black hover:underline transition-colors">
+                <Link href="/" className="text-sm text-gray-700 hover:text-black hover:underline transition-colors">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/services" className="text-sm text-gray-700 hover:text-black hover:underline transition-colors">
+                <Link href="/services" className="text-sm text-gray-700 hover:text-black hover:underline transition-colors">
                   Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/about" className="text-sm text-gray-700 hover:text-black hover:underline transition-colors">
+                <Link href="/about" className="text-sm text-gray-700 hover:text-black hover:underline transition-colors">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/contact" className="text-sm text-gray-700 hover:text-black hover:underline transition-colors">
+                <Link href="/contact" className="text-sm text-gray-700 hover:text-black hover:underline transition-colors">
                   Contact Us
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
